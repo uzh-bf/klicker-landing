@@ -6,9 +6,13 @@
   "dependencies": {
     "gatsby": "next",
     "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-styled-jsx": "2.0.6",
     "react": "16.4.1",
     "react-dom": "16.4.1",
-    "react-helmet": "5.2.0"
+    "react-helmet": "5.2.0",
+    "semantic-ui-css": "2.3.3",
+    "semantic-ui-react": "0.82.0",
+    "styled-jsx": "^2.2.7"
   },
   "license": "AGPL-3.0",
   "scripts": {
