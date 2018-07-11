@@ -1,0 +1,26 @@
+{
+  "name": "klicker-landing",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Roland Schlaefli <rolandschlaefi@gmail.com>",
+  "dependencies": {
+    "gatsby": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
+    "react-helmet": "5.2.0"
+  },
+  "license": "AGPL-3.0",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "prettier": "1.13.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  }
+}
