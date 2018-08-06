@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "author": "Roland Schlaefli <rolandschlaefi@gmail.com>",
   "dependencies": {
-    "gatsby": "2.0.0-beta.72",
-    "gatsby-plugin-react-helmet": "3.0.0-beta.4",
-    "gatsby-plugin-styled-jsx": "2.0.6",
+    "gatsby": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-styled-jsx": "next",
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "react-helmet": "5.2.0",
