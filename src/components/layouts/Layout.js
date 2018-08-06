@@ -1,9 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import '../../node_modules/semantic-ui-css/semantic.css'
+import '../../../node_modules/semantic-ui-css/semantic.css'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { Grid } from 'semantic-ui-react'
+
+import Header from '../common/Header'
+import Footer from '../common/Footer'
 
 export default ({ children }) => (
   <div className="klicker-main">
@@ -30,6 +32,29 @@ export default ({ children }) => (
       #___gatsby,
       .klicker-main {
         height: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #375164;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      h4 {
+        font-size: 1.4rem;
       }
     `}</style>
 

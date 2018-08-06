@@ -1,14 +1,13 @@
 import React from 'react'
-
-import MaxWidth from './MaxWidth'
+import { Container } from 'semantic-ui-react'
 
 export default () => (
   <footer>
-    <MaxWidth>Copyright blaa</MaxWidth>
+    <Container>Copyright blaa</Container>
 
     <style jsx>{`
       footer {
-        background-color: grey;
+        background-color: #618fb0;
         height: 200px;
         padding: 1rem;
       }

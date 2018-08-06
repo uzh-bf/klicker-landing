@@ -1,8 +1,6 @@
 import React from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Container, Menu } from 'semantic-ui-react'
 import { Events, Link, animateScroll as scroll, scrollSpy } from 'react-scroll'
-
-import MaxWidth from './MaxWidth'
 
 export default class Header extends React.Component {
   state = {
@@ -23,9 +21,12 @@ export default class Header extends React.Component {
   render() {
     return (
       <header>
-        <MaxWidth>
+        <Container>
           <div className="klicker-headerContent">
-            <div className="klicker-logo">logo</div>
+            <div className="klicker-logo">
+              Klicker<span className="klicker-logo-high">UZH</span>
+            </div>
+
             <Menu text as="nav">
               <Menu.Item
                 name="home"
@@ -77,7 +78,7 @@ export default class Header extends React.Component {
               </Menu.Item>
             </Menu>
           </div>
-        </MaxWidth>
+        </Container>
 
         <style jsx>{`
           header {
@@ -86,17 +87,24 @@ export default class Header extends React.Component {
 
           .klicker-headerContent {
             display: flex;
+
+            align-items: center;
             justify-content: space-between;
           }
 
-          header .klicker-logo {
-            background-color: lightgrey;
+          .klicker-logo {
             flex: 0 0 200px;
-            margin: 0.5rem 0;
+            margin: 0.25rem 0;
+
+            color: #375164;
+            font-size: 2rem;
+            line-height: 2rem;
           }
 
-          header nav {
-            flex: 0 0 auto;
+          .klicker-logo-high {
+            font-size: 1rem;
+            ling-height: 1rem;
+            vertical-align: top;
           }
         `}</style>
       </header>

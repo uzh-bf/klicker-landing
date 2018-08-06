@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Klicker UZH - Instant Class Response',
   },
   plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-styled-jsx'],
 }

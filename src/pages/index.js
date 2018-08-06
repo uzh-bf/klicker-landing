@@ -1,49 +1,148 @@
 import React from 'react'
+import { Button, Grid, Image, List } from 'semantic-ui-react'
 import { Element } from 'react-scroll'
 
-import Slider from '../components/Slider'
-import MainLayout from '../layouts/MainLayout'
-import Section from '../components/Section'
+import Slider from '../components/slider/Slider'
+import SliderItem from '../components/slider/SliderItem'
+import Layout from '../components/layouts/Layout'
+import Section from '../components/section/Section'
+import SectionPart from '../components/section/SectionPart'
+import FeatureOverview from '../components/section/FeatureOverview'
 
 const IndexPage = () => (
-  <MainLayout>
+  <Layout>
     <Slider>
-      <div>hello</div>
-      <div>world</div>
+      <SliderItem
+        title="Klicker 2.0"
+        description="Now available"
+        imageSrc="img/placeholder.jpg"
+      >
+        <Button primary>Get Started</Button>
+        <Button primary>Login</Button>
+      </SliderItem>
+      <SliderItem
+        title="hello"
+        description="world"
+        imageSrc="img/placeholder.jpg"
+      />
+      <SliderItem
+        title="hello"
+        description="world"
+        imageSrc="img/placeholder.jpg"
+      />
     </Slider>
 
-    <Section>
-      <h2 id="firstHeader">
-        <Element name="header1">header 1</Element>
-      </h2>
-      <p>content1</p>
-    </Section>
+    <div className="sections">
+      <Section>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column verticalAlign="middle" width={5}>
+              <Image src="img/iphone.png" />
+            </Grid.Column>
+            <Grid.Column verticalAlign="middle" width={10}>
+              <FeatureOverview icon="chart line" title="Features of KlickerUZH">
+                <FeatureOverview.Item title="Question &amp; Session Management">
+                  Based on the newly introduced question pool, lecturers can
+                  manage all their past as well as future questions in one
+                  place. The advanced question management allows lecturers to
+                  create and arrange questions into sessions prior to their
+                  lectures, allowing them to plan their lectures in advance.
+                </FeatureOverview.Item>
+                <FeatureOverview.Item title="Dedicated Presentation Mode">
+                  With the dedicated presentation mode, lecturers always have
+                  the most important information available at a glance. The
+                  session evaluation screen can be displayed independently from
+                  the remainder of the application and is purely focused on
+                  presenting the results of an evaluation as cleanly as
+                  possible.
+                </FeatureOverview.Item>
+                <FeatureOverview.Item title="Advanced Question Types">
+                  KlickerUZH offers a range of different question types such as
+                  single choice (SC), multiple choice (MC), free text (FT), and
+                  number ranges (NR). As an additional feature, solutions can be
+                  defined and displayed for SC and MC questions. Further
+                  question types are still on the roadmap.
+                </FeatureOverview.Item>
+                <FeatureOverview.Item title="Integrated Feedback-Channel">
+                  The integrated feedback channel and confusion barometer allow
+                  lecturers to receive instant feedback on the difficulty and
+                  speed of their lecture and enable them to react to any
+                  occurring questions and problems on the fly.
+                </FeatureOverview.Item>
+                <FeatureOverview.Item title="Multi-Language Support">
+                  KlickerUZH is already available in German and English. It was
+                  made to be easily extendable to further languages.
+                </FeatureOverview.Item>
+              </FeatureOverview>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Section>
 
-    <Section>
-      <h2 id="secondHeader">
-        <Element name="header2">header 2</Element>
-      </h2>
-      <p>content2</p>
-    </Section>
-
-    <Section>
-      <h2 id="thirdHeader">
-        <Element name="header3">header 3</Element>
-      </h2>
-      <p>content3</p>
-    </Section>
+      <Section>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column verticalAlign="middle" width={7}>
+              <FeatureOverview icon="github" title="Open Source">
+                <FeatureOverview.Item>
+                  The development and sources of KlickerUZH are completely open
+                  source. This gives lecturers the potential to implement their
+                  own visualizations, languages, or even question types.
+                  Contributions and feedbacks are always welcome!
+                </FeatureOverview.Item>
+                <FeatureOverview.Item title="Project Documentation">
+                  The project documentation is available on{' '}
+                  <a href="https://uzh-bf.github.io/klicker-docs/">
+                    klicker-docs
+                  </a>{' '}
+                  and is being updated regularly. A major upcoming addition
+                  includes contents on the architecture of the application as
+                  well as possible ways of collaborating with the project.
+                </FeatureOverview.Item>
+                <FeatureOverview.Item title="Project Sources">
+                  <List>
+                    <List.Item>
+                      <List.Icon name="github" />
+                      <List.Content>
+                        <a href="https://github.com/uzh-bf/klicker-react">
+                          klicker-react - React/NextJS Frontend
+                        </a>
+                      </List.Content>
+                    </List.Item>
+                    <List.Item>
+                      <List.Icon name="github" />
+                      <List.Content>
+                        <a href="https://github.com/uzh-bf/klicker-api">
+                          klicker-api - GraphQL/NodeJS API
+                        </a>
+                      </List.Content>
+                    </List.Item>
+                    <List.Item>
+                      <List.Icon name="github" />
+                      <List.Content>
+                        <a href="https://github.com/uzh-bf/klicker-docs">
+                          klicker-docs - Documentation
+                        </a>
+                      </List.Content>
+                    </List.Item>
+                  </List>
+                </FeatureOverview.Item>
+              </FeatureOverview>
+            </Grid.Column>
+            <Grid.Column verticalAlign="middle" width={9}>
+              <Image src="img/code.png" />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Section>
+    </div>
 
     <style jsx>{`
-      .section {
-        height: 300px;
-        padding: 1rem 0;
-      }
-
-      .section2 {
-        background-color: lightgrey;
+      .sections {
+        padding: 1rem 10%;
       }
     `}</style>
-  </MainLayout>
+  </Layout>
 )
 
 export default IndexPage
