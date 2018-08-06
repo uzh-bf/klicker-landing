@@ -1,27 +1,31 @@
 import React from 'react'
 import { Button, Grid, Image, List, Embed } from 'semantic-ui-react'
-import { Element } from 'react-scroll'
 
-import Slider from '../components/slider/Slider'
 import Layout from '../components/layouts/Layout'
+import Slider from '../components/slider/Slider'
 import Section from '../components/section/Section'
 import FeatureOverview from '../components/section/FeatureOverview'
 
-const IndexPage = () => (
+import questionPoolMacPNG from '../img/question_pool_mac.png'
+import evaluationMacPNG from '../img/evaluation_mac.png'
+import iphonePNG from '../img/iphone.png'
+import codePNG from '../img/code.png'
+
+export default () => (
   <Layout>
     <Slider>
       <Slider.Item
-        title="Klicker 2.0"
+        title="KlickerUZH"
         description="Now available"
-        imageSrc="img/question_pool_mac.png"
+        imageSrc={questionPoolMacPNG}
       >
         <Button primary>Get Started</Button>
         <Button primary>Login</Button>
       </Slider.Item>
       <Slider.Item
-        title="Klicker 2.0"
+        title="KlickerUZH"
         description="Now available"
-        imageSrc="img/evaluation_mac.png"
+        imageSrc={evaluationMacPNG}
       >
         <Button primary>Get Started</Button>
         <Button primary>Login</Button>
@@ -40,7 +44,7 @@ const IndexPage = () => (
         <Grid stackable>
           <Grid.Row>
             <Grid.Column verticalAlign="middle" width={5}>
-              <Image src="img/iphone.png" />
+              <Image src={iphonePNG} />
             </Grid.Column>
             <Grid.Column verticalAlign="middle" width={10}>
               <FeatureOverview icon="chart line" title="Features of KlickerUZH">
@@ -133,7 +137,7 @@ const IndexPage = () => (
               </FeatureOverview>
             </Grid.Column>
             <Grid.Column verticalAlign="middle" width={9}>
-              <Image src="img/code.png" />
+              <Image src={codePNG} />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -147,5 +151,3 @@ const IndexPage = () => (
     `}</style>
   </Layout>
 )
-
-export default IndexPage

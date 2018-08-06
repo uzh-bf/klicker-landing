@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, Grid, List } from 'semantic-ui-react'
+import { Element } from 'react-scroll'
+import { Link } from 'gatsby'
 
 export default () => (
   <footer>
@@ -19,11 +21,18 @@ export default () => (
               Plattenstrasse 32<br />
               8032 Zurich
             </address>
+
+            <Element name="footer" />
           </Grid.Column>
           <Grid.Column>
             <List>
-              <List.Item>Terms of Service</List.Item>
-              <List.Item>Privacy Policy</List.Item>
+              <List.Item>
+                <Link to="/tos">Terms of Service</Link>
+              </List.Item>
+
+              <List.Item>
+                <Link to="/privacy">Privacy Policy</Link>
+              </List.Item>
             </List>
           </Grid.Column>
         </Grid.Row>
@@ -36,6 +45,10 @@ export default () => (
         color: white;
         height: 15rem;
         padding: 1rem;
+      }
+
+      footer a {
+        color: white;
       }
 
       address {

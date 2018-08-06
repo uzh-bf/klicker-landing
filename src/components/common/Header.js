@@ -1,6 +1,12 @@
 import React from 'react'
 import { Container, Menu } from 'semantic-ui-react'
-import { Events, Link, animateScroll as scroll, scrollSpy } from 'react-scroll'
+import {
+  Events,
+  Link as ScrollLink,
+  animateScroll as scroll,
+  scrollSpy,
+} from 'react-scroll'
+import { Link } from 'gatsby'
 
 export default class Header extends React.Component {
   state = {
@@ -24,7 +30,9 @@ export default class Header extends React.Component {
         <Container>
           <div className="klicker-headerContent">
             <div className="klicker-logo">
-              Klicker<span className="klicker-logo-high">UZH</span>
+              <Link to="/">
+                Klicker<span className="klicker-logo-high">UZH</span>
+              </Link>
             </div>
 
             <Menu text as="nav">
@@ -39,42 +47,18 @@ export default class Header extends React.Component {
                 Home
               </Menu.Item>
 
-              <Menu.Item
-                name="faq"
-                active={this.state.activeMenuItem === 'faq'}
-                onClick={this.changeActiveMenuItem}
-              >
-                FAQ
-              </Menu.Item>
+              <Menu.Item name="faq">FAQ</Menu.Item>
+
+              <Menu.Item name="legacy">Klicker Legacy</Menu.Item>
 
               <Menu.Item
-                name="header1"
-                active={this.state.activeMenuItem === 'header1'}
+                name="contact"
+                active={this.state.activeMenuItem === 'contact'}
                 onClick={this.changeActiveMenuItem}
               >
-                <Link to="header1" smooth duration={500} offset={-50}>
-                  Header 1
-                </Link>
-              </Menu.Item>
-
-              <Menu.Item
-                name="header2"
-                active={this.state.activeMenuItem === 'header2'}
-                onClick={this.changeActiveMenuItem}
-              >
-                <Link to="header2" smooth duration={500} offset={-50}>
-                  Header 2
-                </Link>
-              </Menu.Item>
-
-              <Menu.Item
-                name="header3"
-                active={this.state.activeMenuItem === 'header3'}
-                onClick={this.changeActiveMenuItem}
-              >
-                <Link to="header3" smooth duration={500} offset={-50}>
-                  Header 3
-                </Link>
+                <ScrollLink to="footer" smooth duration={500} offset={-50}>
+                  Contact
+                </ScrollLink>
               </Menu.Item>
             </Menu>
           </div>
