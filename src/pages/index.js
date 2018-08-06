@@ -1,40 +1,43 @@
 import React from 'react'
-import { Button, Grid, Image, List } from 'semantic-ui-react'
+import { Button, Grid, Image, List, Embed } from 'semantic-ui-react'
 import { Element } from 'react-scroll'
 
 import Slider from '../components/slider/Slider'
-import SliderItem from '../components/slider/SliderItem'
 import Layout from '../components/layouts/Layout'
 import Section from '../components/section/Section'
-import SectionPart from '../components/section/SectionPart'
 import FeatureOverview from '../components/section/FeatureOverview'
 
 const IndexPage = () => (
   <Layout>
     <Slider>
-      <SliderItem
+      <Slider.Item
         title="Klicker 2.0"
         description="Now available"
-        imageSrc="img/placeholder.jpg"
+        imageSrc="img/question_pool_mac.png"
       >
         <Button primary>Get Started</Button>
         <Button primary>Login</Button>
-      </SliderItem>
-      <SliderItem
-        title="hello"
-        description="world"
-        imageSrc="img/placeholder.jpg"
-      />
-      <SliderItem
-        title="hello"
-        description="world"
-        imageSrc="img/placeholder.jpg"
-      />
+      </Slider.Item>
+      <Slider.Item
+        title="Klicker 2.0"
+        description="Now available"
+        imageSrc="img/evaluation_mac.png"
+      >
+        <Button primary>Get Started</Button>
+        <Button primary>Login</Button>
+      </Slider.Item>
+      <Slider.Embed>
+        <Embed
+          id="8nS-fvi86l0"
+          placeholder="/images/image-16by9.png"
+          source="youtube"
+        />
+      </Slider.Embed>
     </Slider>
 
     <div className="sections">
       <Section>
-        <Grid>
+        <Grid stackable>
           <Grid.Row>
             <Grid.Column verticalAlign="middle" width={5}>
               <Image src="img/iphone.png" />
@@ -80,7 +83,7 @@ const IndexPage = () => (
       </Section>
 
       <Section>
-        <Grid>
+        <Grid stackable>
           <Grid.Row>
             <Grid.Column verticalAlign="middle" width={7}>
               <FeatureOverview icon="github" title="Open Source">

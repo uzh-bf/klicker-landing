@@ -31,8 +31,11 @@ FeatureOverview.Item = ({ title, children }) => (
 
     <style jsx>{`
       .feature {
-        border-bottom: 1px solid lightgrey;
         padding: 1rem 0;
+      }
+
+      .feature:not(:last-child) {
+        border-bottom: 1px solid lightgrey;
       }
 
       .feature > h4 {
