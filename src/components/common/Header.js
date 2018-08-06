@@ -47,9 +47,20 @@ export default class Header extends React.Component {
                 Home
               </Menu.Item>
 
-              <Menu.Item name="faq">FAQ</Menu.Item>
+              <Menu.Item name="faq">
+                <a
+                  href="https://uzh-bf.github.io/klicker-docs/docs/faq.html"
+                  target="_blank"
+                >
+                  FAQ
+                </a>
+              </Menu.Item>
 
-              <Menu.Item name="legacy">Klicker Legacy</Menu.Item>
+              <Menu.Item name="legacy">
+                <a href="http://www.klicker.uzh.ch/login" target="_blank">
+                  Klicker Legacy
+                </a>
+              </Menu.Item>
 
               <Menu.Item
                 name="contact"
