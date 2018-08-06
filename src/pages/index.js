@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Grid, Image, List, Embed } from 'semantic-ui-react'
 
+import KlickerUZH from '../components/common/KlickerUZH'
 import Layout from '../components/layouts/Layout'
 import Slider from '../components/slider/Slider'
 import Section from '../components/section/Section'
@@ -15,16 +16,20 @@ export default () => (
   <Layout>
     <Slider>
       <Slider.Item
-        title="KlickerUZH"
-        description="Now available"
+        title={<KlickerUZH />}
+        description="Now released in version 1.0.0"
         imageSrc={questionPoolMacPNG}
       >
-        <Button primary>Get Started</Button>
-        <Button primary>Login</Button>
+        <a href="https://app.klicker.uzh.ch/user/registration" target="_blank">
+          <Button primary>Get Started</Button>
+        </a>
+        <a href="https://app.klicker.uzh.ch/user/login" target="_blank">
+          <Button primary>Login</Button>
+        </a>
       </Slider.Item>
       <Slider.Item
-        title="KlickerUZH"
-        description="Now available"
+        title={<KlickerUZH />}
+        description="Now released in version 1.0.0"
         imageSrc={evaluationMacPNG}
       >
         <Button primary>Get Started</Button>
@@ -47,7 +52,14 @@ export default () => (
               <Image src={iphonePNG} />
             </Grid.Column>
             <Grid.Column verticalAlign="middle" width={10}>
-              <FeatureOverview icon="chart line" title="Features of KlickerUZH">
+              <FeatureOverview
+                icon="chart line"
+                title={
+                  <div>
+                    Features of <KlickerUZH />
+                  </div>
+                }
+              >
                 <FeatureOverview.Item title="Question &amp; Session Management">
                   Based on the newly introduced question pool, lecturers can
                   manage all their past as well as future questions in one
