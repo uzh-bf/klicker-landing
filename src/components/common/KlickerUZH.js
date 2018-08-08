@@ -1,17 +1,22 @@
 import React from 'react'
 
-export default () => (
+const KlickerUZH = ({ fontSize }) => (
   <span className="logo">
-    Klicker<span className="high">UZH</span>
+    Klicker
+    <span className="high">UZH</span>
     <style jsx>{`
       .logo {
-        font-size: 2rem;
+        font-size: ${fontSize}rem;
       }
 
       .logo > .high {
-        font-size: 1rem;
+        font-size: ${fontSize / 2}rem;
         vertical-align: top;
       }
     `}</style>
   </span>
 )
+
+KlickerUZH.defaultProps = { fontSize: 2 }
+
+export default KlickerUZH

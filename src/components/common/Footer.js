@@ -3,22 +3,35 @@ import { Container, Grid, List } from 'semantic-ui-react'
 import { Element } from 'react-scroll'
 import { Link } from 'gatsby'
 
+import KlickerUZH from './KlickerUZH'
+
 export default () => (
   <footer>
     <Container>
       <Grid columns={2}>
         <Grid.Row>
           <Grid.Column>
-            <strong>KlickerUZH</strong>
+            <strong>
+              <KlickerUZH fontSize={1.2} />
+            </strong>
 
             <p>
               Created by the DBF Teaching Center at the University of Zurich
             </p>
 
+            <p>
+              Contact us via{' '}
+              <a href="mailto:klicker.support@uzh.ch">klicker.support@uzh.ch</a>{' '}
+              or livechat.
+            </p>
+
             <address>
-              Teaching Center<br />
-              Department of Banking and Finance<br />
-              Plattenstrasse 32<br />
+              Teaching Center
+              <br />
+              Department of Banking and Finance
+              <br />
+              Plattenstrasse 32
+              <br />
               8032 Zurich
             </address>
 
@@ -47,12 +60,9 @@ export default () => (
         padding: 1rem;
       }
 
-      footer a {
-        color: white;
-      }
-
-      address {
-        font-style: none;
+      footer a,
+      footer a.item {
+        color: white !important;
       }
     `}</style>
   </footer>

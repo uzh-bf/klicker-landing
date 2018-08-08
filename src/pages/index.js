@@ -17,7 +17,7 @@ export default () => (
     <Slider>
       <Slider.Item
         title={<KlickerUZH />}
-        description="Now released in version 1.0.0"
+        description="Now released in version 2.0"
         imageSrc={questionPoolMacPNG}
       >
         <a href="https://app.klicker.uzh.ch/user/registration" target="_blank">
@@ -29,11 +29,15 @@ export default () => (
       </Slider.Item>
       <Slider.Item
         title={<KlickerUZH />}
-        description="Now released in version 1.0.0"
+        description="Now released in version 2.0"
         imageSrc={evaluationMacPNG}
       >
-        <Button primary>Get Started</Button>
-        <Button primary>Login</Button>
+        <a href="https://app.klicker.uzh.ch/user/registration" target="_blank">
+          <Button primary>Get Started</Button>
+        </a>
+        <a href="https://app.klicker.uzh.ch/user/login" target="_blank">
+          <Button primary>Login</Button>
+        </a>
       </Slider.Item>
       <Slider.Embed>
         <Embed
@@ -76,11 +80,11 @@ export default () => (
                   possible.
                 </FeatureOverview.Item>
                 <FeatureOverview.Item title="Advanced Question Types">
-                  KlickerUZH offers a range of different question types such as
-                  single choice (SC), multiple choice (MC), free text (FT), and
-                  number ranges (NR). As an additional feature, solutions can be
-                  defined and displayed for SC and MC questions. Further
-                  question types are still on the roadmap.
+                  <KlickerUZH fontSize={1} /> offers a range of different
+                  question types such as single choice (SC), multiple choice
+                  (MC), free text (FT), and number ranges (NR). As an additional
+                  feature, solutions can be defined and displayed for SC and MC
+                  questions. Further question types are still on the roadmap.
                 </FeatureOverview.Item>
                 <FeatureOverview.Item title="Integrated Feedback-Channel">
                   The integrated feedback channel and confusion barometer allow
@@ -89,8 +93,9 @@ export default () => (
                   occurring questions and problems on the fly.
                 </FeatureOverview.Item>
                 <FeatureOverview.Item title="Multi-Language Support">
-                  KlickerUZH is already available in German and English. It was
-                  made to be easily extendable to further languages.
+                  <KlickerUZH fontSize={1} /> is already available in German and
+                  English. It was made to be easily extendable to further
+                  languages.
                 </FeatureOverview.Item>
               </FeatureOverview>
             </Grid.Column>
@@ -104,10 +109,11 @@ export default () => (
             <Grid.Column verticalAlign="middle" width={7}>
               <FeatureOverview icon="github" title="Open Source">
                 <FeatureOverview.Item>
-                  The development and sources of KlickerUZH are completely open
-                  source. This gives lecturers the potential to implement their
-                  own visualizations, languages, or even question types.
-                  Contributions and feedbacks are always welcome!
+                  The development and sources of <KlickerUZH fontSize={1} /> are
+                  completely open source. This gives lecturers the potential to
+                  implement their own visualizations, languages, or even
+                  question types. Contributions and feedbacks are always
+                  welcome!
                 </FeatureOverview.Item>
                 <FeatureOverview.Item title="Project Documentation">
                   The project documentation is available on{' '}
