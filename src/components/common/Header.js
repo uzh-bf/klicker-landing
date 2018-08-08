@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Container, Menu } from 'semantic-ui-react'
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 import { Link } from 'gatsby'
 
 export default class Header extends React.Component {
@@ -10,13 +10,6 @@ export default class Header extends React.Component {
 
   changeActiveMenuItem = (e, { name }) => {
     this.setState({ activeMenuItem: name })
-  }
-
-  scrollToTop = () => {
-    scroll.scrollToTop({
-      smooth: true,
-      duration: 500,
-    })
   }
 
   render() {
@@ -37,10 +30,9 @@ export default class Header extends React.Component {
                 active={this.state.activeMenuItem === 'home'}
                 onClick={(_, data) => {
                   this.changeActiveMenuItem(_, data)
-                  this.scrollToTop()
                 }}
               >
-                Home
+                <Link to="/">Home </Link>
               </Menu.Item>
 
               <Menu.Item name="faq">
@@ -73,7 +65,6 @@ export default class Header extends React.Component {
                   primary
                   as="a"
                   href="https://app.klicker.uzh.ch/user/login"
-                  size="tiny"
                   target="_blank"
                 >
                   Login
