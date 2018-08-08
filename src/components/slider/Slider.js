@@ -43,7 +43,7 @@ Slider.Item = ({ title, description, imageSrc, children }) => (
       </Grid.Column>
       <Grid.Column verticalAlign="middle" width={11}>
         <div className="image">
-          <Image src={imageSrc} height="350px" width="auto" />
+          <Image fluid src={imageSrc} />
         </div>
       </Grid.Column>
     </Grid>
