@@ -66,8 +66,6 @@ export default ({ children }) => (
 
       .klicker-stickyHeader {
         flex: 0 0 auto;
-        position: -webkit-sticky;
-        position: sticky;
         top: 0;
         z-index: 1;
       }
@@ -79,6 +77,13 @@ export default ({ children }) => (
 
       .klicker-footer {
         flex: 0 0 auto;
+      }
+
+      @media all and (min-width: 968px) {
+        .klicker-stickyHeader {
+          position: -webkit-sticky;
+          position: sticky;
+        }
       }
     `}</style>
   </div>

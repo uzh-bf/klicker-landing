@@ -35,7 +35,7 @@ const Slider = ({ children }) => (
 
 Slider.Item = ({ title, description, imageSrc, children }) => (
   <div className="sliderItem">
-    <Grid>
+    <Grid stackable reversed="mobile">
       <Grid.Column verticalAlign="middle" width={5}>
         <h2>{title}</h2>
         <p>{description}</p>

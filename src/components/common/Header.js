@@ -1,11 +1,6 @@
 import React from 'react'
-import { Container, Menu } from 'semantic-ui-react'
-import {
-  Events,
-  Link as ScrollLink,
-  animateScroll as scroll,
-  scrollSpy,
-} from 'react-scroll'
+import { Button, Container, Menu } from 'semantic-ui-react'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import { Link } from 'gatsby'
 
 export default class Header extends React.Component {
@@ -31,7 +26,8 @@ export default class Header extends React.Component {
           <div className="klicker-headerContent">
             <div className="klicker-logo">
               <Link to="/">
-                Klicker<span className="klicker-logo-high">UZH</span>
+                Klicker
+                <span className="klicker-logo-high">UZH</span>
               </Link>
             </div>
 
@@ -56,9 +52,9 @@ export default class Header extends React.Component {
                 </a>
               </Menu.Item>
 
-              <Menu.Item name="legacy">
+              <Menu.Item>
                 <a href="http://www.klicker.uzh.ch/login" target="_blank">
-                  Klicker Legacy
+                  Legacy
                 </a>
               </Menu.Item>
 
@@ -71,6 +67,18 @@ export default class Header extends React.Component {
                   Contact
                 </ScrollLink>
               </Menu.Item>
+
+              <Menu.Item>
+                <Button
+                  primary
+                  as="a"
+                  href="https://app.klicker.uzh.ch/user/login"
+                  size="tiny"
+                  target="_blank"
+                >
+                  Login
+                </Button>
+              </Menu.Item>
             </Menu>
           </div>
         </Container>
@@ -82,14 +90,14 @@ export default class Header extends React.Component {
 
           .klicker-headerContent {
             display: flex;
+            flex-direction: column;
 
             align-items: center;
             justify-content: space-between;
           }
 
           .klicker-logo {
-            flex: 0 0 200px;
-            margin: 0.25rem 0;
+            margin-top: 1rem;
 
             color: #375164;
             font-size: 2rem;
@@ -98,8 +106,19 @@ export default class Header extends React.Component {
 
           .klicker-logo-high {
             font-size: 1rem;
-            ling-height: 1rem;
+            line-height: 1rem;
             vertical-align: top;
+          }
+
+          @media all and (min-width: 986px) {
+            .klicker-headerContent {
+              flex-direction: row;
+            }
+
+            .klicker-logo {
+              flex: 0 0 200px;
+              margin: 0.25rem 0;
+            }
           }
         `}</style>
       </header>
