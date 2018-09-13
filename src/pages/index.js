@@ -57,7 +57,7 @@ export default () => (
       </Slider.Item>
       <Slider.Embed>
         <Embed
-          id="8nS-fvi86l0"
+          id="Dpx7BWKeqlo"
           placeholder="/images/image-16by9.png"
           source="youtube"
         />

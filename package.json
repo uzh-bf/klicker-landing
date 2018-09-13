@@ -1,6 +1,6 @@
 {
   "name": "klicker-landing",
-  "description": "Gatsby default starter",
+  "description": "Landing Page for the KlickerUZH project",
   "version": "1.0.0",
   "author": "Roland Schlaefli <rolandschlaefi@gmail.com>",
   "dependencies": {
