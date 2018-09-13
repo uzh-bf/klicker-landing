@@ -20,10 +20,18 @@ export default () => (
         description="Now released in version 2.0"
         imageSrc={questionPoolMacPNG}
       >
-        <a href="https://app.klicker.uzh.ch/user/registration" target="_blank">
+        <a
+          href="https://app.klicker.uzh.ch/user/registration"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button primary>Get Started</Button>
         </a>
-        <a href="https://app.klicker.uzh.ch/user/login" target="_blank">
+        <a
+          href="https://app.klicker.uzh.ch/user/login"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button primary>Login</Button>
         </a>
       </Slider.Item>
@@ -32,10 +40,18 @@ export default () => (
         description="Now released in version 2.0"
         imageSrc={evaluationMacPNG}
       >
-        <a href="https://app.klicker.uzh.ch/user/registration" target="_blank">
+        <a
+          href="https://app.klicker.uzh.ch/user/registration"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button primary>Get Started</Button>
         </a>
-        <a href="https://app.klicker.uzh.ch/user/login" target="_blank">
+        <a
+          href="https://app.klicker.uzh.ch/user/login"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button primary>Login</Button>
         </a>
       </Slider.Item>

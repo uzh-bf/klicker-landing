@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid, Icon, Image, Segment } from 'semantic-ui-react'
+import { Container, Icon, Image, Segment } from 'semantic-ui-react'
 
 const Section = ({ title, children }) => (
   <div className="section">

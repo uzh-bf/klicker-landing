@@ -2,8 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import '../../../node_modules/semantic-ui-css/semantic.css'
 
-import { Grid } from 'semantic-ui-react'
-
 import Header from '../common/Header'
 import Footer from '../common/Footer'
 

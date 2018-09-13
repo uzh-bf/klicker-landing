@@ -39,13 +39,18 @@ export default class Header extends React.Component {
                 <a
                   href="https://uzh-bf.github.io/klicker-docs/docs/faq.html"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   FAQ
                 </a>
               </Menu.Item>
 
               <Menu.Item>
-                <a href="http://www.klicker.uzh.ch/login" target="_blank">
+                <a
+                  href="http://www.klicker.uzh.ch/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Legacy
                 </a>
               </Menu.Item>
@@ -66,6 +71,7 @@ export default class Header extends React.Component {
                   as="a"
                   href="https://app.klicker.uzh.ch/user/login"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Login
                 </Button>
